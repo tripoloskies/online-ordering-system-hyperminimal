@@ -1,0 +1,58 @@
+[
+    {
+        "id": "good_product",
+        "name": "Good Product",
+        "description": "lorem ipsum dormat",
+        "rating": 4.4,
+        "quantity": 99,
+        "prices": {
+            "S": 99,
+            "M": 169,
+            "L": 299
+        }
+    },
+    {
+        "name": "Good Product",
+        "description": "lorem ipsum dormat",
+        "rating": 4.4,
+        "quantity": 99,
+        "prices": {
+            "S": 99,
+            "M": 169,
+            "L": 299
+        }
+    },
+    {
+        "name": "Good Product",
+        "description": "lorem ipsum dormat",
+        "rating": 4.4,
+        "quantity": 99,
+        "prices": {
+            "S": 99,
+            "M": 169,
+            "L": 299
+        }
+    },
+    {
+        "name": "Good Product",
+        "description": "lorem ipsum dormat",
+        "rating": 4.4,
+        "quantity": 99,
+        "prices": {
+            "S": 99,
+            "M": 169,
+            "L": 299
+        }
+    },
+    {
+        "name": "Good Product",
+        "description": "lorem ipsum dormat",
+        "rating": 4.4,
+        "quantity": 99,
+        "prices": {
+            "S": 99,
+            "M": 169,
+            "L": 299
+        }
+    }
+]
