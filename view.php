@@ -11,6 +11,8 @@ $api = new ProductAPI();
 $product_id = $_GET["id"] ?? "";
 $product = $api->get($product_id);
 
+// print_r($product)
+
 ?>
 <!DOCTYPE html>
     <head>

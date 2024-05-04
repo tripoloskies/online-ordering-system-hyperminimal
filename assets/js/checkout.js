@@ -1,7 +1,10 @@
 (function() {
 
-    var listsBox = document.getElementById("cart-box-lists")
 
+    var totalPrice = 0
+    var listsBox = document.getElementById("cart-box-lists")
+    var totalPriceLabel = document.getElementById("total-price-label")
+    var totalPriceInput = document.getElementById("total-price-input")
     function reload() {
         var cartData = JSON.parse(localStorage.getItem("cart"))
 
@@ -11,35 +14,30 @@
             let data = cartData[index]
             var container = document.createElement("div")
             var descriptionContainer = document.createElement("div")
-            var actionsContainer = document.createElement("div")
-            var deleteButton = document.createElement("button")
+            var priceContainer = document.createElement("div")
+            var priceLabel = document.createElement("b")
             var nameLabel = document.createElement("h4")
             var descLabel = document.createElement("p")
     
             container.classList.add("cart-box-list")
             descriptionContainer.classList.add("cart-box-description")
-            actionsContainer.classList.add("cart-box-actions")
-            deleteButton.classList.add("btn", "danger")
-            
-            deleteButton.textContent = "Delete"
             nameLabel.textContent = data.name
-            descLabel = `${data.price.name} | ${data.price.value}`
+            descLabel = `${data.price.name}`
 
-            deleteButton.addEventListener("click", () => {
-                cartData.splice(index, 1)
-                localStorage.setItem("cart", JSON.stringify(cartData))
-                reload()
-            })
-            
+            totalPrice += data.price.value
+
+            priceLabel.textContent = `Php ${data.price.value}.00`
+            priceContainer.append(priceLabel)
             descriptionContainer.append(nameLabel)
             descriptionContainer.append(descLabel)
-
-            actionsContainer.append(deleteButton)
             container.append(descriptionContainer)
-            container.append(actionsContainer)
+            container.append(priceContainer)
             listsBox.append(container)
         }
     }
 
     reload()
+
+    totalPriceLabel.textContent = `Php ${totalPrice}.00`
+    totalPriceInput.value = totalPrice
 }())

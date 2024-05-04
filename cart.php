@@ -19,8 +19,12 @@ $api = new ProductAPI();
     <body>
         <?php Template::Navigation("Cart") ?>   
         <section class="container">
+            <div class="">
+                <h2>Cart</h2>
+            </div>
             <div id="cart-box-lists">
                 
             </div>
+            <a href="/checkout.php" class="btn success">Checkout</a>
         </section>
     </body>

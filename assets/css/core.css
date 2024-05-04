@@ -24,6 +24,8 @@ a {
     color: var(--black);
 }
 
+
+
 .container {
     max-width: 768px;
     margin: auto;
@@ -35,6 +37,16 @@ header {
     padding: 16px;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+input {
+    border: 1px solid black;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
 /* Navigation */
 
 #navigation {
@@ -147,6 +159,7 @@ header {
     font-weight: bold; 
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
 .btn.primary {
@@ -233,3 +246,13 @@ header {
     margin: 8px 0;
 }
 
+
+/* Cart */
+.cart-box-list {
+    display: flex;
+    align-items: center;
+}
+
+.cart-box-description {
+    flex-grow: 1;
+}

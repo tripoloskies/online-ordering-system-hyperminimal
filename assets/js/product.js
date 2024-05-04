@@ -18,6 +18,6 @@
         
         localStorage.setItem("cart", JSON.stringify(cartData))
 
-        console.log(cartData)
+        location.href = "/cart.php"
     })
 }())

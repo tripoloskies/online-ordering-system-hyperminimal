@@ -16,9 +16,10 @@ class Products {
     public function get(string $product_id): array {
         $results = array_filter($this->products_list, function(array $product) use (&$product_id) {
             if (!isset($product["id"])) return false;
-            return $product["id"] === $product_id;
+            return $product["id"] == $product_id;
         });
 
+        $results = array_values($results);
         return $results[0] ?? [];
     }
 
