@@ -1,0 +1,6 @@
+#headline {
+    height: 100vh;
+    background: url("/assets/img/front_page.png");
+    background-size: cover;
+    background-position: center;
+}
